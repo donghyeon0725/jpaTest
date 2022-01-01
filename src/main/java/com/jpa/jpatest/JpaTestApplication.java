@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class JpaTestApplication {
 
     public static void main(String[] args) {
+        
         SpringApplication app = new SpringApplication(JpaTestApplication.class);
         app.run(args);
     }
