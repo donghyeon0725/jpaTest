@@ -81,7 +81,7 @@ public class UserController {
 
 
         User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("유저가 없습니다."));
-        entityManager.detach();
+        entityManager.detach(user);
 
         User returnUser = new User();
         returnUser.setProfileUrl("https://test.com/" + user.getProfileUrl());
